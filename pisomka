@@ -1,0 +1,19 @@
+#napiste funkciu kt sa bude volat jozo bude mat 1 vstupnz parameter tzm bude zoznam, funkcia vrati true ak  je v zozname viac parnzch  ako neparnych cisel
+
+import random
+
+def jozo(zoz):
+    a= 0
+    b= 0
+    if type(zoz) == list:
+        for i in range(10):
+            zoz.append(random.randrange(0,21))
+        for i in range(0, len(zoz)):
+            if zoz[i] % 2==0 and i%2==0:
+                a+=1
+            else:
+                b+=1
+        if a>b:
+                return True
+        else:
+                return False
